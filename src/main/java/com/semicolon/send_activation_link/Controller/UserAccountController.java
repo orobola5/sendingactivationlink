@@ -24,7 +24,6 @@ public class UserAccountController {
     @Autowired
     private EmailService emailService;
 
-    @RequestMapping(value = "/register",method = RequestMethod.GET)
     public ModelAndView displayRegistration(ModelAndView modelAndView, UserEntity userEntity){
         modelAndView.addObject("userEntity",userEntity);
         modelAndView.setViewName("register");
