@@ -30,7 +30,7 @@ public class UserAccountController {
 
         return modelAndView;
     }
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    @ RequestMapping(value = "/register",method = RequestMethod.POST)
     public ModelAndView registerUser(ModelAndView modelAndView,UserEntity userEntity){
         UserEntity existingUser=userEntityRepository.findByEmailIdIgnoreCase(userEntity.getEmailId());
         if(existingUser !=null){
